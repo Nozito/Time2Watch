@@ -1,0 +1,32 @@
+<!-- res/drawable/ic_movies.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Corps principal de la pellicule -->
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M2,4 L22,4 L22,20 L2,20 Z M4,4 L4,20 L6,20 L6,4 Z M18,4 L18,20 L20,20 L20,4 Z" />
+
+    <!-- Détails de la pellicule (des petits carrés blancs) -->
+    <rect
+        android:width="4dp"
+        android:height="4dp"
+        android:x="6dp"
+        android:y="10dp"
+        android:fillColor="#FFFFFF" />
+    <rect
+        android:width="4dp"
+        android:height="4dp"
+        android:x="10dp"
+        android:y="10dp"
+        android:fillColor="#FFFFFF" />
+    <rect
+        android:width="4dp"
+        android:height="4dp"
+        android:x="14dp"
+        android:y="10dp"
+        android:fillColor="#FFFFFF" />
+</vector>

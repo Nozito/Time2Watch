@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1E2747"
+    >
+
+    <!-- Nom de la ville -->
+    <TextView
+        android:id="@+id/city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paris"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="16dp"/>
+
+    <!-- Température principale -->
+    <TextView
+        android:id="@+id/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20°"
+        android:textSize="72sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="4dp" />
+
+    <!-- Description de la météo -->
+    <TextView
+        android:id="@+id/weather_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ensoleillé"
+        android:textSize="20sp"
+        android:textColor="#D0D3E2"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="12dp" />
+
+    <!-- Températures Min et Max dans un conteneur horizontal -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="24dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/temp_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Min : 15°"
+            android:textSize="18sp"
+            android:textColor="#A1A7C1"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:id="@+id/temp_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Max : 25°"
+            android:textSize="18sp"
+            android:textColor="#A1A7C1" />
+    </LinearLayout>
+
+    <!-- Prévisions pour 5 jours -->
+    <TextView
+        android:id="@+id/forecast_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prévisions pour les 5 jours"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="8dp" />
+
+    <!-- RecyclerView des prévisions -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_forecast"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        android:elevation="8dp" />
+
+    <!-- Barre de navigation en bas avec 3 boutons -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#000000">
+
+        <!-- Bouton Météo -->
+        <Button
+            android:id="@+id/btn_weather"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Météo"
+            android:drawableTop="@drawable/ic_weather"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="#ffff"
+            android:padding="8dp" />
+
+        <!-- Bouton Accueil -->
+        <Button
+            android:id="@+id/btn_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Accueil"
+            android:drawableTop="@drawable/ic_home"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="#fff"
+            android:padding="8dp" />
+
+        <!-- Bouton Films -->
+        <Button
+            android:id="@+id/btn_movies"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Films"
+            android:drawableTop="@drawable/ic_movies"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="#ffff"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

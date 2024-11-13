@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#3d3d3d">
+
+    <!-- Texte principal en haut de l'écran -->
+    <TextView
+        android:id="@+id/mainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time2Watch"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:textColor="#ffff" />
+
+    <!-- Barre de navigation en bas avec 3 boutons -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#000000">
+
+        <!-- Bouton Météo -->
+        <Button
+            android:id="@+id/btn_weather"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Météo"
+            android:drawableTop="@drawable/ic_weather"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="#ffff"
+            android:padding="8dp" />
+
+        <!-- Bouton Accueil -->
+        <Button
+            android:id="@+id/btn_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Accueil"
+            android:drawableTop="@drawable/ic_home"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="#fff"
+            android:padding="8dp" />
+
+        <!-- Bouton Films -->
+        <Button
+            android:id="@+id/btn_movies"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Films"
+            android:drawableTop="@drawable/ic_movies"
+            android:background="?attr/selectableItemBackground"
+            android:textColor="#ffff"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
