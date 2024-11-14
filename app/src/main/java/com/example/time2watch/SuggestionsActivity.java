@@ -29,21 +29,17 @@ public class SuggestionsActivity extends AppCompatActivity implements Suggestion
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suggestions);
 
-        // Initialisation des vues
         recyclerView = findViewById(R.id.recycler_view_suggestions);
         suggestionsTitle = findViewById(R.id.suggestions_title);
 
-        // Configuration du RecyclerView
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Récupération de la condition météo depuis l'intent
         String weatherCondition = getIntent().getStringExtra("weather_condition");
         if (weatherCondition == null || weatherCondition.isEmpty()) {
-            weatherCondition = "clear"; // Valeur par défaut
+            weatherCondition = "clear";
         }
         Log.d(TAG, "Condition météo utilisée : " + weatherCondition);
 
-        // Chargement des suggestions de films
         loadSuggestions(weatherCondition);
     }
 

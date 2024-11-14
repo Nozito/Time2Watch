@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main"
     android:background="#3d3d3d">
 
     <!-- Texte principal en haut de l'écran -->
+
+    <!-- Barre de navigation en bas avec 3 boutons -->
     <TextView
         android:id="@+id/mainTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time2Watch"
-        android:textSize="32sp"
-        android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:textColor="#ffff" />
+        android:text="Time2Watch"
+        android:textColor="#ffff"
+        android:textSize="32sp"
+        android:textStyle="bold" />
 
-    <!-- Barre de navigation en bas avec 3 boutons -->
     <LinearLayout
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:background="#000000">
+        android:background="#000000"
+        android:orientation="horizontal">
 
         <!-- Bouton Météo -->
         <Button
@@ -32,11 +33,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Météo"
-            android:drawableTop="@drawable/ic_weather"
             android:background="?attr/selectableItemBackground"
-            android:textColor="#ffff"
-            android:padding="8dp" />
+            android:drawableTop="@drawable/ic_weather"
+            android:padding="8dp"
+            android:text="Météo"
+            android:textColor="#ffff" />
 
         <!-- Bouton Accueil -->
         <Button
@@ -44,11 +45,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Accueil"
-            android:drawableTop="@drawable/ic_home"
             android:background="?attr/selectableItemBackground"
-            android:textColor="#fff"
-            android:padding="8dp" />
+            android:drawableTop="@drawable/ic_home"
+            android:padding="8dp"
+            android:text="Accueil"
+            android:textColor="#fff" />
 
         <!-- Bouton Films -->
         <Button
@@ -56,11 +57,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Films"
-            android:drawableTop="@drawable/ic_movies"
             android:background="?attr/selectableItemBackground"
-            android:textColor="#ffff"
-            android:padding="8dp" />
+            android:drawableTop="@drawable/ic_movies"
+            android:padding="8dp"
+            android:text="Films"
+            android:textColor="#ffff" />
 
     </LinearLayout>
 

@@ -4,13 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    android:background="@android:color/white"
+    android:background="#FFFFFF"
     android:padding="5dp"
     tools:context=".BottomSheetDetailsFragment">
-
-    <!-- Bouton de fermeture en haut à droite (croix) -->
-
-    <!-- Affiche du film (image de film ajustée) -->
 
     <!-- Titre du film -->
 
@@ -90,14 +86,15 @@
     <Button
         android:id="@+id/btn_watch"
         android:layout_width="357dp"
-        android:layout_height="41dp"
+        android:layout_height="50dp"
+        android:background="@color/purple_500"
         android:elevation="6dp"
-        android:padding="0dp"
+        android:padding="10dp"
         android:text="Regarder la bande annonce"
         android:textAllCaps="true"
-        android:textColor="#ffffff"
-        android:background="@color/black"
-        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detail_synopsis" />

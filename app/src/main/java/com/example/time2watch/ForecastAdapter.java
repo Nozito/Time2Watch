@@ -22,10 +22,10 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
     private List<ForecastResponse.WeatherForecast> forecastList;
 
     public ForecastAdapter(List<ForecastResponse.WeatherForecast> forecastList) {
-        this.forecastList = filterAndSortDailyForecasts(forecastList);  // Filtrer et trier les prévisions
+        this.forecastList = filterAndSortDailyForecasts(forecastList);
     }
 
-    // Méthode pour regrouper les prévisions par jour, calculer les températures min/max et les trier chronologiquement
+
     private List<ForecastResponse.WeatherForecast> filterAndSortDailyForecasts(List<ForecastResponse.WeatherForecast> forecastList) {
         Map<String, ForecastResponse.WeatherForecast> dailyForecasts = new HashMap<>();
 
@@ -55,7 +55,6 @@ public class ForecastAdapter extends RecyclerView.Adapter<ForecastAdapter.Foreca
     @NonNull
     @Override
     public ForecastViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // Inflate le layout pour chaque item de la liste
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.forecast_item, parent, false);
         return new ForecastViewHolder(view);
     }

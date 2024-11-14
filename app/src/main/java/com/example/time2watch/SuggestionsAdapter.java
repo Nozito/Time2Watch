@@ -20,7 +20,6 @@ public class SuggestionsAdapter extends RecyclerView.Adapter<SuggestionsAdapter.
     private final Context context;
     private final OnMovieClickListener listener;
 
-    // Constructeur
     public SuggestionsAdapter(List<Movie> movieList, Context context, OnMovieClickListener listener) {
         this.movieList = movieList;
         this.context = context;
@@ -38,13 +37,11 @@ public class SuggestionsAdapter extends RecyclerView.Adapter<SuggestionsAdapter.
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Movie movie = movieList.get(position);
 
-        // Affichage des données du film
         holder.title.setText(movie.getTitle());
         Glide.with(context)
                 .load("https://image.tmdb.org/t/p/w500" + movie.getPosterPath())
                 .into(holder.poster);
 
-        // Assurez-vous que le clic sur le bouton déclenche l'action
         holder.seeMoreButton.setOnClickListener(v -> {
             if (listener != null) {
                 listener.onSeeMoreClicked(movie);
@@ -60,17 +57,16 @@ public class SuggestionsAdapter extends RecyclerView.Adapter<SuggestionsAdapter.
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView title;
         ImageView poster;
-        Button seeMoreButton;  // Ajout du bouton ici
+        Button seeMoreButton;
 
         public ViewHolder(View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.movie_title);
             poster = itemView.findViewById(R.id.movie_poster);
-            seeMoreButton = itemView.findViewById(R.id.btn_see_more);  // Référence au bouton
+            seeMoreButton = itemView.findViewById(R.id.btn_see_more);
         }
     }
 
-    // Interface pour gérer les clics sur les films
     public interface OnMovieClickListener {
         void onSeeMoreClicked(Movie movie);
     }

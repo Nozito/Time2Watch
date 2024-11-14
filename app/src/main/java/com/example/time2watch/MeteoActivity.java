@@ -110,7 +110,6 @@ public class MeteoActivity extends AppCompatActivity {
     }
 
     private void getWeatherData(String city) {
-        // Appel API pour récupérer les données météo actuelles
         Call<WeatherResponse> weatherCall = api.getCurrentWeather(city, OpenWeatherApi.API_KEY, "metric");
         weatherCall.enqueue(new Callback<WeatherResponse>() {
             @Override
@@ -163,17 +162,14 @@ public class MeteoActivity extends AppCompatActivity {
     }
 
     public void sendWeatherCondition() {
-        // Exemple dans MeteoActivity pour envoyer la condition météo
-        String weatherCondition = "clear"; // Cette valeur vient normalement d'une API ou d'une logique
+        String weatherCondition = "clear";
         Intent intent = new Intent(MeteoActivity.this, SuggestionsActivity.class);
 
-        // Vérification avant d'envoyer
         if (weatherCondition != null && !weatherCondition.isEmpty()) {
             intent.putExtra("weather_condition", weatherCondition);
             startActivity(intent);
         } else {
             Log.e("MeteoActivity", "La condition météo est nulle ou vide.");
-            // Afficher un message d'erreur ou prendre une action appropriée
         }
     }
 }

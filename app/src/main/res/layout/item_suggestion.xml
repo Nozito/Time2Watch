@@ -5,8 +5,10 @@
     android:layout_marginTop="8dp"
     android:elevation="4dp"
     android:radius="8dp"
-    android:background="?android:attr/selectableItemBackground"
-    android:layout_gravity="center">
+    android:background="@drawable/rounded_button"
+    android:layout_gravity="center"
+
+    >
 
     <LinearLayout
         android:orientation="vertical"
@@ -18,8 +20,9 @@
             android:id="@+id/movie_poster"
             android:layout_width="140dp"
             android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/movie_title"

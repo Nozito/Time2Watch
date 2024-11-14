@@ -16,13 +16,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialisation des boutons
         btnWeather = findViewById(R.id.btn_weather);
         btnHome = findViewById(R.id.btn_home);
         btnMovies = findViewById(R.id.btn_movies);
 
 
-        // OnClickListeners pour les boutons
         btnWeather.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
